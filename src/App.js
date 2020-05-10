@@ -8,31 +8,31 @@ import { connect } from "react-redux";
 import { BreadcrumbsProvider } from "react-breadcrumbs-dynamic";
 
 // home page
-const HomeCosmetics = lazy(() => import("./pages/home/HomeCosmetics"));
+const Home = lazy(() => import("./pages/home/Home"));
 
 // shop page
 const ShopGridStandard = lazy(() => import("./pages/shop/ShopGridStandard"));
 
 // product page
-const ProductTabLeft = lazy(() =>
+/*const ProductTabLeft = lazy(() =>
   import("./pages/shop-product/ProductTabLeft")
-);
+);*/
 
 // blog page
-const BlogRightSidebar = lazy(() => import("./pages/blog/BlogRightSidebar"));
+//const BlogRightSidebar = lazy(() => import("./pages/blog/BlogRightSidebar"));
 
 // other pages
-const About = lazy(() => import("./pages/other/About"));
-const Contact = lazy(() => import("./pages/other/Contact"));
-const MyAccount = lazy(() => import("./pages/other/MyAccount"));
-const LoginRegister = lazy(() => import("./pages/other/LoginRegister"));
+//const About = lazy(() => import("./pages/other/About"));
+//const Contact = lazy(() => import("./pages/other/Contact"));
+//const MyAccount = lazy(() => import("./pages/other/MyAccount"));
+//const LoginRegister = lazy(() => import("./pages/other/LoginRegister"));
 
-const Cart = lazy(() => import("./pages/other/Cart"));
-const Wishlist = lazy(() => import("./pages/other/Wishlist"));
-const Compare = lazy(() => import("./pages/other/Compare"));
-const Checkout = lazy(() => import("./pages/other/Checkout"));
+//const Cart = lazy(() => import("./pages/other/Cart"));
+//const Wishlist = lazy(() => import("./pages/other/Wishlist"));
+//const Compare = lazy(() => import("./pages/other/Compare"));
+//const Checkout = lazy(() => import("./pages/other/Checkout"));
 
-const NotFound = lazy(() => import("./pages/other/NotFound"));
+//const NotFound = lazy(() => import("./pages/other/NotFound"));
 
 const App = props => {
   useEffect(() => {
@@ -62,8 +62,9 @@ const App = props => {
             >
               <Switch>                
                 <Route
-                  path={process.env.PUBLIC_URL + "/home-cosmetics"}
-                  component={HomeCosmetics}
+                  exact
+                  path={process.env.PUBLIC_URL + "/"}
+                  component={Home}
                 />                
 
                 {/* Shop page */}
@@ -73,58 +74,55 @@ const App = props => {
                 />                
 
                 {/* Shop product page */}                
-                <Route
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/product-tab-left/:id"}
                   component={ProductTabLeft}
-                />                
+                />*/}                
 
                 {/* Blog page */}               
-                <Route
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/blog-right-sidebar"}
                   component={BlogRightSidebar}
-                />
+                />*/}
                
                 {/* Other pages */}
-                <Route
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/about"}
                   component={About}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/contact"}
                   component={Contact}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/my-account"}
                   component={MyAccount}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/login-register"}
                   component={LoginRegister}
-                />
-
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/cart"}
                   component={Cart}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/wishlist"}
                   component={Wishlist}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/compare"}
                   component={Compare}
-                />
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/checkout"}
                   component={Checkout}
-                />
-
-                <Route
+                />*/}
+                {/*<Route
                   path={process.env.PUBLIC_URL + "/not-found"}
                   component={NotFound}
-                />
-
-                <Route exact component={NotFound} />
+                />*/}
+                {/*<Route exact component={NotFound} />*/}
               </Switch>
             </Suspense>
           </ScrollToTop>
